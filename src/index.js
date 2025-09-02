@@ -1,17 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {HashRouter} from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store';
+import { ThemeProvider } from 'styled-components';
+import theme from './assets/theme';
+
+import 'normalize.css';
+import './assets/css/index.less';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+
+  // Suspense应该放在Provider里面:因为Provider是异步加载,即Suspense与懒加载那些还没加载完成,所有导致Provider里面没有值
+  // 总之与懒加载和异步处理有关(底层代码)
+  // 同时也是打印三次的原因
+<React.StrictMode>
+    <HashRouter>
+      <Provider store={store}>
+          <ThemeProvider theme={theme}>
+            <App />
+          </ThemeProvider>
+      </Provider>
+    </HashRouter>
+</React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

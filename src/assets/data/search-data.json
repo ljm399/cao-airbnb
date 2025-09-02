@@ -1,0 +1,32 @@
+[
+  {
+    "title": "搜索房源",
+    "searchInfos": [
+      {
+        "name": "位置",
+        "value": "任何地方"
+      },
+      {
+        "name": "时间",
+        "value": "任何时间"
+      },
+      {
+        "name": "人数",
+        "value": "添加人数"
+      }
+    ]
+  },
+  {
+    "title": "体验",
+    "searchInfos": [
+      {
+        "name": "房源",
+        "value": "整套房源"
+      },
+      {
+        "name": " accommodates",
+        "value": " accommodates"
+      }
+    ]
+  }
+]
