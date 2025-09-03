@@ -17,6 +17,7 @@ export default memo(function AppHeader() {
 
   const { scrollY } = useScrollPosition()
   const prevScrollY = useRef(0)
+  console.log("第四次提交")
 
   // 使用useEffect处理滚动逻辑，避免在渲染期间执行副作用
   useEffect(() => {
