@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react'
+import React, { memo } from 'react'
 import IconSearch from '@/assets/svg/iconSearch'
 import { HeaderCenterWrapper } from './styel'
 import SearchTabs from './c-cpns/search-tabs'

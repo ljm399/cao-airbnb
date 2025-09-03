@@ -14,6 +14,11 @@ module.exports = {
       '@': resolve('src'),
       "components": resolve('src/components'),
       "utils": resolve('src/utils')
+    },
+    configure: (webpackConfig, { env, paths }) => {
+      // 修改输出目录
+      webpackConfig.output.path = resolve('dist')
+      return webpackConfig
     }
   }
 }
